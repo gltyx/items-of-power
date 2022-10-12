@@ -1,0 +1,416 @@
+:root {
+    --light: #f0f0f0;
+    --light-grey: #b8b8b8;
+    --grey: #949494;
+    --dark-grey: #3d3d3d;
+    --dark: #262327;
+    --light-primary: #0E69BE;
+    --primary: #094074;
+    --dark-primary: #07345F;
+    --light-secondary: #fc9564;
+    --secondary: #f95738;
+    --dark-secondary: #f52819;
+    --positive: #31be31b6;
+    --negative: #cc3c3c;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/fonts/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: Arcane;
+  src: url(../assets/fonts/ArcaneNine.otf);
+}
+
+* {
+    font-family: Roboto;
+    white-space: nowrap;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    color: var(--light);
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 65px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 54px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 43px;
+    margin: 0;
+}
+
+h4, label {
+    font-size: 32px;
+    margin: 0;
+}
+
+h5 {
+    font-size: 22px;
+    margin: 0;
+}
+
+h6 {
+    font-size: 11px;
+    margin: 0;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #game > canvas {
+        max-width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #game > canvas {
+        width: 100%;
+        max-height: 100%;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.three-quarters-width {
+    width: 75%;
+}
+
+.two-thirds-width {
+    width: 67%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.one-third-width {
+    width: 33%;
+}
+
+.one-quarter-width {
+    width: 25%;
+}
+
+.one-fifth-width {
+    width: 20%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.three-quarters-height {
+    height: 75%;
+}
+
+.two-thirds-height {
+    height: 67%;
+}
+
+.half-height {
+    height: 50%;
+}
+
+.one-third-height {
+    height: 33%;
+}
+
+.one-quarter-height {
+    height: 25%;
+}
+
+.one-fifth-height {
+    height: 20%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.no-display {
+    display: none !important;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.scrollable {
+    overflow-y: scroll;
+}
+
+.wrap {
+    white-space: normal;
+}
+
+.center {
+    text-align: center;
+}
+
+.dark-text {
+    color: var(--dark);
+}
+
+.green-text {
+    color: var(--positive);
+    transition: color 0s !important;
+}
+
+.red-text {
+    color: var(--negative);
+    transition: color 0s !important;
+}
+
+.enlarge {
+    transform: scale(2);
+    transition: transform 0s !important;
+}
+
+button, input[type=submit] {
+    pointer-events: auto;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0 9px var(--dark-primary);
+    color: var(--light);
+    padding: 16px 27px;
+    margin: 11px;
+    font-size: 43px;
+}
+
+button:hover, input[type=submit]:hover {
+    background-color: var(--light-primary);
+}
+
+button:active, input[type=submit]:active {
+    background-color: var(--light-primary);
+    box-shadow: 0 4px var(--dark-primary);
+    transform: translateY(4px);
+}
+
+button:disabled, input[type=submit]:disabled {
+    background-color: var(--grey);
+    box-shadow: 0 9px var(--light-grey);
+}
+
+.secondary-button {
+    background-color: var(--secondary);
+    box-shadow: 0 9px var(--dark-secondary);
+}
+
+.secondary-button:hover {
+    background-color: var(--light-secondary);
+}
+
+.secondary-button:active {
+    background-color: var(--light-secondary);
+    box-shadow: 0 4px var(--dark-secondary);
+}
+
+input {
+    pointer-events: auto;
+    color: var(--dark-grey);
+    text-align: center;
+}
+
+a {
+    pointer-events: auto;
+    color: var(--dark-primary);
+}
+
+.game-button {
+    padding: 14px 14px 3px 14px;
+}
+
+.small-gap {
+    gap: 4px;
+}
+
+.medium-gap {
+    gap: 16px;
+}
+
+.on-top {
+    z-index: 1;
+}
+
+.interactive {
+    pointer-events: all;
+    user-select: none;
+}
+
+.uninteractive {
+    pointer-events: none;
+    user-select: none;
+}
+
+.beige-panel {
+    border-image-source: url('../assets/img/ui/panel_beige.png');
+    border-image-slice: 7 fill;
+    border-image-width: 7px;
+    padding: 10px 12px;
+    background: #d3bf8f;
+    border-radius: 7px;
+    color: var(--dark);
+}
+
+.light-beige-panel {
+    border-image-source: url('../assets/img/ui/panel_beigeLight.png');
+    border-image-slice: 7 fill;
+    border-image-width: 7px;
+    padding: 10px 12px;
+    background: #ece3ce;
+    border-radius: 7px;
+}
+
+.blue-panel {
+    border-image-source: url('../assets/img/ui/panel_blue.png');
+    border-image-slice: 7 fill;
+    border-image-width: 7px;
+    padding: 10px 12px;
+    background: #838796;
+    border-radius: 7px;
+}
+
+.bubble {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 200px;
+    background: var(--light);
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: var(--dark);
+    white-space: normal;
+    transition: transform 1s linear;
+}
+  
+.bubble-bottom-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 24px solid var(--light);
+    border-right: 12px solid transparent;
+    border-top: 12px solid var(--light);
+    border-bottom: 20px solid transparent;
+    left: 32px;
+    bottom: -24px;
+}
+
+.bubble-bottom-right:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 24px solid var(--light);
+    border-left: 12px solid transparent;
+    border-top: 12px solid var(--light);
+    border-bottom: 20px solid transparent;
+    right: 32px;
+    bottom: -24px;
+}
+
+@keyframes yoyo-rotate {
+    0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+.yoyo-rotate {
+    animation: yoyo-rotate 2s infinite linear;
+}
+
+/* Shared between Achievements and Game */
+
+.achievement {
+    height: 200px;
+}
+
+.achievement-name {
+    font-size: 24px;
+}
+
+.achievement-img {
+    height: 50%;
+}
+
+.silhouette {
+    filter: grayscale(100%) brightness(0);
+}
+
+.greyed-out {
+    filter: grayscale(100%);
+}
+
+.enable-button {
+    font-size: 14px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/css/options.css">
+    </head>
+    <body>
+        <div class="container col">
+            <div class="blue-panel col one-third-width three-quarters-height">
+                <h1>Options</h1>
+                <div class="row">
+                    <label>Music:&nbsp;</label>
+                    <input id="music-volume" class="volume-slider" type="range" min="0" max="1" value="0.5" step="0.01" onchange="Options.updateMusicVolume(this.value)" />
+                </div>
+                <div class="row">
+                    <label>SFX:&nbsp;</label>
+                    <input id="sfx-volume" class="volume-slider" type="range" min="0" max="1" value="0.5" step="0.01" onchange="Options.updateSfxVolume(this.value)" />
+                </div>
+                <div class="row three-quarters-width">
+                    <button class="back-button" onclick="Options.back(true)">Save</button>
+                    <button class="back-button" onclick="Options.back(false)">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

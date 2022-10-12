@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/css/game.css">
+    </head>
+    <body>
+        <div id="game-container" class="container col space-between">
+            <button id="exit" class="game-button" onclick="Game.startOptions()">
+                <img id="exit-img" src="assets/img/ui/gear.png" />
+            </button>
+            <div class="row full-width align-start">
+                <div id="ally-huds" class="row half-width align-start"></div>
+                <div id="enemy-huds" class="row half-width align-start"></div>
+            </div>
+            <div class="info-panels row full-width align-end">
+                <div id="unit-hud" class="row half-width full-height"></div>
+                <div class="col full-height">
+                    <button id="play-button" class="game-speed-button secondary-button" onclick="Game.togglePause()"><img src="assets/img/ui/pause.png" /></button>
+                    <button id="ff-button" class="game-speed-button secondary-button no-display" onclick="Game.toggleFastForward()"><img src="assets/img/ui/fastForward.png" /></button>
+                </div>
+                <div id="item-hud" class="row half-width full-height"></div>
+            </div>
+        </div>
+    </body>
+</html>

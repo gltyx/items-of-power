@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/css/main-menu.css">
+    </head>
+    <body>
+        <div class="container interactive">
+            <div id="menu" class="container col uninteractive">
+                <div class="blue-panel col one-third-width three-quarters-height">
+                    <h1 id="title">Items of Power</h1>
+                    <button id="resume-button" class="no-display" onclick="MainMenu.resumeGame()">Resume</button>
+                    <button id="new-game-button" onclick="MainMenu.startGame()">New Game</button>
+                    <button id="load-game-button" class="no-display" onclick="MainMenu.showSaves()">Load Game</button>
+                    <button onclick="MainMenu.startAchievements()">Achievements</button>
+                    <button onclick="MainMenu.startOptions()">Options</button>
+                    <button onclick="MainMenu.startCredits()">Credits</button>
+                </div>
+            </div>
+            <div id="saves" class="container col uninteractive no-display">
+                <div class="blue-panel col one-third-width three-quarters-height">
+                    <h1>Load Game</h1>
+                    <div id="save-slots" class="half-width half-height interactive scrollable"></div>
+                    <button onclick="MainMenu.hideSaves()">Back</button>
+                </div>
+            </div>
+            <div class="discord-widget">
+                <iframe src="https://discord.com/widget?id=992084017962831933&theme=dark" width="360" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+    </body>
+</html>
