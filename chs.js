@@ -221,7 +221,7 @@ var cnItems = {
     "Druid: Heal all allies for 10% POW": "德鲁伊：治疗所有队友 10% 力量的生命值",
     "Druid": "德鲁伊",
     "Heal all allies for 10% POW": "治疗所有队友 10% 力量的生命值",
-    "": "",
+    "Power of Nature": "自然之力",
     "": "",
     "": "",
     "": "",
