@@ -499,6 +499,7 @@ var cnRegReplace = new Map([
     [/^\+([\d\.,]+) POW, \-([\d\.,]+) SPD every ([\d\.,]+) seconds$/, '\+$1 力量，\-$2 速度 每隔 $3 秒'],
     [/^\+([\d\.,]+) POW, \+([\d\.,]+) SPD every ([\d\.,]+) second. Resets unit\'s ability charge$/, '\+$1 力量，\+$2 速度 每隔 $3 秒。重置单位的能力费用'],
     [/^\+([\d\.,]+) HP, heal ([\d\.,]+)\% of missing health every ([\d\.,]+) seconds$/, '\+$1 生命值, 治愈 $2\% 丢失的生命值每隔 $3 秒'],
+    [/^([\d\.,]+)\): \+([\d\.,]+) HP, heal ([\d\.,]+)\% of missing health every 5 seconds$/, '$1\)：\+$2 生命值，每 5 秒治疗 $3\% 的已损失生命值'],
     [/^\*(.+) to electricity gain$/, '\*$1 到电力增益'],
     [/^Cost: (.+) points$/, '成本：$1 点数'],
     [/^Req: (.+) elves$/, '要求：$1 精灵'],
