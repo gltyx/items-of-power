@@ -2191,7 +2191,7 @@
                 key: "revive",
                 value: function (e, t, n, i) {
                     var a;
-                    this.dead && (this.stats.health = e, this.tint = 16777215, this.dead = !1, this.startAbility(), t && (a = this.scene.getPopupText(n, i, "REVIVED", t), this.scene.uiTweens.add({
+                    this.dead && (this.stats.health = e, this.tint = 16777215, this.dead = !1, this.startAbility(), t && (a = this.scene.getPopupText(n, i, "复活", t), this.scene.uiTweens.add({
                         targets: a,
                         y: a.y - 20,
                         alpha: 0,
