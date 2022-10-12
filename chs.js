@@ -115,7 +115,7 @@ var cnItems = {
     "Basic Attack": "基础攻击",
     "Congratulations on killing the first boss! There are 5 unique bosses in this version of the game and the first time killing each will reward you new unlockables having a chance to show up.": "恭喜您杀死了第一位老板！ 这个版本的游戏中有5个独特的老板，第一次杀死每个人都会奖励您有机会出现的新解锁。",
     "Decline": "拒绝",
-    "Drink Blood": "饮血",
+    "Drink Blood": "吸血",
     "For killing the Goblin Big Boss you now have a chance to get the Potion. Anything you unlock will also be available in any new runs you start. You can disable any unlocks in the Achievements menu.": "为了杀死妖精的大老板，您现在有机会获得药水。 您解锁的任何内容也将在您开始的任何新运行中可用。 您可以在“成就”菜单中禁用任何解锁。",
     "Goblin Big Boss": "哥布林大Boss",
     "Goblin Boomer": "哥布林喷射者",
