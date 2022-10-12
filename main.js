@@ -2258,25 +2258,25 @@
                 key: "gainStats",
                 value: function (e, t, n, i) {
                     var a, s, o = "\n";
-                    "number" == typeof e.power && 0 !== e.power && (a = e.power * this.powMultiplier, this.stats.power += a, this.stats.power < 1 && (this.stats.power = 1), o += "POW ".concat(w(a, !0, 0), "\n"), this.isAlly && (0 < a ? this.scene.events.emit("POWER_GAIN", {
+                    "number" == typeof e.power && 0 !== e.power && (a = e.power * this.powMultiplier, this.stats.power += a, this.stats.power < 1 && (this.stats.power = 1), o += "力量 ".concat(w(a, !0, 0), "\n"), this.isAlly && (0 < a ? this.scene.events.emit("POWER_GAIN", {
                         amt: a,
                         unitType: this.type
                     }) : this.scene.events.emit("POWER_LOSS", {
                         amt: a,
                         unitType: this.type
-                    }))), "number" == typeof e.speed && 0 !== e.speed && (this.stats.speed += e.speed, this.stats.speed < 1 && (this.stats.speed = 1), o += "SPD ".concat(w(e.speed, !0, 0), "\n"), this.isAlly && (0 < e.speed ? this.scene.events.emit("SPEED_GAIN", {
+                    }))), "number" == typeof e.speed && 0 !== e.speed && (this.stats.speed += e.speed, this.stats.speed < 1 && (this.stats.speed = 1), o += "速度 ".concat(w(e.speed, !0, 0), "\n"), this.isAlly && (0 < e.speed ? this.scene.events.emit("SPEED_GAIN", {
                         amt: e.speed,
                         unitType: this.type
                     }) : this.scene.events.emit("SPEED_LOSS", {
                         amt: e.speed,
                         unitType: this.type
-                    }))), "number" == typeof e.maxHealth && 0 !== e.maxHealth && (this.stats.maxHealth += e.maxHealth, this.stats.maxHealth < 1 && (this.stats.maxHealth = 1), o += "HP ".concat(w(e.maxHealth, !0, 0), "\n"), this.isAlly && (0 < e.maxHealth ? this.scene.events.emit("HEALTH_GAIN", {
+                    }))), "number" == typeof e.maxHealth && 0 !== e.maxHealth && (this.stats.maxHealth += e.maxHealth, this.stats.maxHealth < 1 && (this.stats.maxHealth = 1), o += "生命值 ".concat(w(e.maxHealth, !0, 0), "\n"), this.isAlly && (0 < e.maxHealth ? this.scene.events.emit("HEALTH_GAIN", {
                         amt: e.maxHealth,
                         unitType: this.type
                     }) : this.scene.events.emit("HEALTH_LOSS", {
                         amt: e.maxHealth,
                         unitType: this.type
-                    }))), "number" == typeof e.health && 0 < this.stats.health && (this.stats.health += e.health, this.stats.health > this.stats.maxHealth && (this.stats.health = this.stats.maxHealth), this.stats.health < 1 && (this.stats.health = 1), e.maxHealth !== e.health && 0 < e.health && (o += "HEALED ".concat(w(e.health, !1, 0), "\n"))), void 0 !== t && (s = this.scene.getPopupText(n, i, o, t), this.scene.uiTweens.add({
+                    }))), "number" == typeof e.health && 0 < this.stats.health && (this.stats.health += e.health, this.stats.health > this.stats.maxHealth && (this.stats.health = this.stats.maxHealth), this.stats.health < 1 && (this.stats.health = 1), e.maxHealth !== e.health && 0 < e.health && (o += "治疗了 ".concat(w(e.health, !1, 0), "\n"))), void 0 !== t && (s = this.scene.getPopupText(n, i, o, t), this.scene.uiTweens.add({
                         targets: s,
                         y: s.y - 20,
                         alpha: 0,
@@ -2791,7 +2791,7 @@
                     var t = this,
                         e = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : "",
                         n = !(1 < arguments.length && void 0 !== arguments[1]) || arguments[1];
-                    0 < e.length && (e += "\n\nEncounter ".concat(this.scene.encounterIndex, "\nTier ").concat(this.scene.tier)), this.infoText.text = e, this.infoText.alpha = 1, this.scene.uiTweens.addCounter({
+                    0 < e.length && (e += "\n\n遭遇 ".concat(this.scene.encounterIndex, "\n关卡 ").concat(this.scene.tier)), this.infoText.text = e, this.infoText.alpha = 1, this.scene.uiTweens.addCounter({
                         from: 72,
                         to: 18,
                         duration: 2e3,
@@ -3207,7 +3207,7 @@
                                 }
                                 return o
                             }(this, this.tier), this.selected = !1, this.moveEnemiesToPositions(function () {
-                                n.trail.stopMoving(), n.hud.setInfoText("选择一个\n异能道具", 1 !== n.encounterIndex), n.hud.setEnemies(n.enemies, "ITEM_SHOP"), n.enemies.forEach(function (e) {
+                                n.trail.stopMoving(), n.hud.setInfoText("选择一件\n装备", 1 !== n.encounterIndex), n.hud.setEnemies(n.enemies, "ITEM_SHOP"), n.enemies.forEach(function (e) {
                                     e.setInteractive(), e.on("pointerdown", function () {
                                         return n.selectShopItem(e)
                                     })
